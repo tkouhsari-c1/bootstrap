@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_dynamodb_table" "my_table" {
-  name           = "${var.project_name}-table"
+  name           = "${var.table_name_base}-table"
   billing_mode   = "PROVISIONED"  # can be "PAY_PER_REQUEST" for on-demand mode
   read_capacity  = 5              # read capacity for PROVISIONED mode
   write_capacity = 5              # write capacity for PROVISIONED mode
